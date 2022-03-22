@@ -2,6 +2,11 @@
 
 
 
+	https://github.com/vishhaldawane/SBITO2
+
+
+
+
 line1		the word "water" is not water
 2
 3		returnType   functionName(argument list)
@@ -292,35 +297,45 @@ eq MONEY
 
 
 			Day 1
-Shashi Bamne		Complete
-Ayan			Complete
-Nimya			Complete
-KrishnaKumar		Complete
-Suraj			Complete
-Mamta			Complete
-Srilakshmi		Complete
-Jyotsna			Complete
-Veni			Complete
-Nidhi			Complete
-Kanwar			Complete
-Poornima		Complete
-Deepmala		Complete
-Ruchi			Complete
-Sandeep			Complete
-Sagar			Complete
-Mayur			Complete
-Vignesh			Complete
-Swaraj			Complete
-Avinash			Complete
-Jayendra		Complete
-Nishant			Complete
-Rajendra		Complete
-Pawan			Complete
-Sourabh			Complete
+Shashi Bamne		Complete	TwoWheeler
+Ayan			Complete	ClassRoom
+Nimya			Complete	Restaurant
+KrishnaKumar		Complete	AirConditioner
+Suraj			Complete	Book
+Mamta			Complete	Shirt
+Srilakshmi		Complete	FeedBackForm
+Jyotsna			Complete	Toy
+Veni			Complete	HolidayHome
+Nidhi			Complete	Library
+Kanwar			Complete	Hotel	
+Poornima		Complete	Acquarium
+Deepmala		Complete	ReportCard
+Ruchi			Complete	Trading
+Sandeep			Complete	GasBill
+Sagar			Complete	Company
+Mayur			Complete	Movie
+Vignesh			Complete	Vehicle
+Swaraj			Complete	Food
+Avinash			Complete	KFC
+Jayendra		Complete	Laptop
+Nishant			Complete	Branch
+Rajendra		Complete	FoodRestaurant
+Pawan			Complete	LearningGuitar
+Sourabh			Complete	AirConditioner
+	
 
 
-
-
+	Personal victory
+	1. Be proactive
+	2. begin with the end in mind
+	3. put first thing first
+	|
+	4. think win-win
+	|
+	public victory
+	5. seek first to understand then to be understood
+	6. synergy
+	7. sharpen the SAW
 
 
 		OOPS concepts
@@ -401,6 +416,87 @@ Sourabh			Complete
 		{
 
 		}
+https://github.com/vishhaldawane/Projects
+
+
+
+
+
+
+
+
+
+		2 phases
+		|
+		unmanifested				manifested
+		invisible				visible
+		thoughts + emotions			action + result
+		intention + attention	  time		karma + result		
+
+				           TEAR
+
+	
+
+		OOPS Concepts
+		--------------------
+
+		1. Abstraction
+			- it is the "what is?" part of an object
+			- hiding the complexity of an object
+			- providing its "simple usage" via accesible functions
+
+
+		2. Encapsulation
+			- it is the "How is it?" part of an object
+			- writing/developing the complexity of an object
+			- binding of data with concerned functions
+
+
+			private data - data encapsulation
+			private method - method encapsulation
+
+		3. Polymorphism
+
+		4. Inheritance
+	
+		5. Object communication
+
+
+
+
+
+
+
+
+	Mamta 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
