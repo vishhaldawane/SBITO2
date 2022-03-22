@@ -1,0 +1,413 @@
+
+
+
+
+line1		the word "water" is not water
+2
+3		returnType   functionName(argument list)
+4		{
+5			code here
+6		}
+7bcde1231232132132132132131
+	1. function "without argument(s)" and "without return" value
+
+		void function (   )
+		{
+			
+		}
+		void clearScreen()
+		{
+
+		}
+
+	2. function "with argument(s)" but without return value
+		
+		void goto(int x, int y)
+		{
+
+		}
+
+	3. function "with argument(s)" and "with return value"
+
+		float findAverage(int x, int y, int z)
+		{
+			float avg= (x+y+z) / 3.0f;
+			return avg;
+		}
+
+	4. function "without arguments" but "with return value"
+
+		float findTheDistanceBetweenTheEarthAndTheSun()
+		{
+			float SPEED_OF_LIGHT = 186000.519; //miles per sec
+			float TIME_TO_REACH_ON_EARTH=480; // seconds
+			float DISTANCE = SPEED_OF_LIGHT * TIME_TO_REACH_ON_EARTH;
+			return DISTANCE;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	1991 1994 
+
+	layer 1 - TABLES - data base tables
+
+		PAYEE
+		-----
+		acno		ifsccode	payeename
+		123123123	SBI020202	mamta
+
+
+	layer 2 - POJO - plain old java object (data + functionality )
+		class Payee
+		{
+			int payeeAcNumber;
+			String payeeName;
+			String ifscCode;
+	
+		}
+
+	layer 3 - Repository - kitchen - CR-RA-UD service - orm - HIBERNATE 
+
+			class PayeeRepository
+			{
+				void addPayee()
+				{
+
+				}
+			}
+	----------------- permission denied -------------
+	layer 4 - Business Service 
+			class PayeeManagementService
+			{
+				void addPayee()
+				{
+
+				}
+			}
+
+			
+
+	layer 5 - Controller - spring
+			http://sbi.com/bankproject/addpayee/bla bla bla ......
+
+	layer 6 - UI - angular/react
+
+			dash board of rajesh
+
+	Payee management
+		|
+		add payee
+		view payee
+		delete payee
+User : Rajesh 
+		ADD PAYEE MODULE
+
+	Add the payee a/c  : 123123123123
+	Re-Enter payee a/c :123123123123
+	IFSC CODE          :SBI00243SD
+	Payee Name	   :mamta
+
+		ADD
+
+				Java Programming language
+								- With Vishhal
+
+
+					who
+					|core people ???developer, tester, deploy, use
+				----------------------
+				|		|
+				when		where
+				|time		|where		space time	
+			----------------------------------------
+			|		|		|
+			why		what		how
+			reason		inFORMation	implementation
+								coding
+
+
+class Phone
+			{
+				dial() {
+				
+				}
+			}
+
+			class Student
+			{
+				void study()
+				{
+
+				}
+			}
+
+
+
+
+
+
+eq MONEY
+
+
+	JAVA KIDS
+
+		SPOKEN
+		|
+		LISTEN		SPEAK		READING		WRITING
+		<-- CONCEPTS---------->		CODE		CODE
+
+		
+
+				Java Technology
+					|
+			---------------------------------------------
+			|		|		|
+			JSE		JEE		JME
+			|		|		|
+		STANDARD		ENTERPRISE	MICRO - MOBILE (ANDROID API)
+		DESKTOP APP		|
+		|			|
+		CORE JAVA		ENTERPRISE JAVA
+	1. language fundamentals
+
+
+
+				SBI APPLICATION
+				SERVER MACHINE
+				|	
+		------------------------------------------
+		|	|	|	|	|	|
+		pC	atm	PHONE	smart	ivr	visa
+		|	|	|	phone	|	|
+		sbi.com app	sms	app		cc/dc
+
+
+
+	
+	1. REMOTE CAPABILITY
+			NETWORKING
+		socket programming
+			ip address + port number
+
+
+	2. HIGH AVAILABILITY - 24 X 7 
+
+	3. MULTITHREADING
+
+	4. pooling of the resources
+	5. caching of resources
+	6. transaction management - Atomicity Consistency Isolation Durable 
+	7. security management - https, TLS, otp, password, grid details 
+
+			
+				      db	
+				server|
+				| - per minute 2000 means 33 customers per second
+				
+				| conn3 , conn4, conn5
+		-----------------------------------
+		|		|	|	|
+				4000	3000
+
+
+	mumbai to london - 31st March 2022
+	  200 - 9pm 
+		
+		shashi bamne
+	
+		shame his ban
+
+		name his bash				
+
+		shine has bam
+
+
+
+	ayan ghosh
+
+	oh! has gyan
+
+	oo   rare
+	
+	oo!!! m in rare path 
+	
+	deep mala lilhore
+
+	i am lil deep hero
+
+	more lip read 
+
+	dear lil home 
+
+
+
+		non-linear
+
+
+		THINK + FEEL = ACT + RESULT
+	
+
+
+
+	class SavingsAccount
+	{
+		void withdraw(float amt)
+		{
+
+		}
+		float getBalance()
+		{
+			return balance;
+		}
+		void printAccountDetails()
+		{
+
+		}
+		Tea makeTea(Milk m, Water w, Sugar s,TeaBag tb ) {
+					
+		}
+	}
+
+===========================================================================================
+
+
+			Day 1
+Shashi Bamne		Complete
+Ayan			Complete
+Nimya			Complete
+KrishnaKumar		Complete
+Suraj			Complete
+Mamta			Complete
+Srilakshmi		Complete
+Jyotsna			Complete
+Veni			Complete
+Nidhi			Complete
+Kanwar			Complete
+Poornima		Complete
+Deepmala		Complete
+Ruchi			Complete
+Sandeep			Complete
+Sagar			Complete
+Mayur			Complete
+Vignesh			Complete
+Swaraj			Complete
+Avinash			Complete
+Jayendra		Complete
+Nishant			Complete
+Rajendra		Complete
+Pawan			Complete
+Sourabh			Complete
+
+
+
+
+
+
+		OOPS concepts
+		----------------
+
+		"Object" oriented programming system
+
+
+		Object = physical state + behaviour
+				data    + function
+ 
+				
+		BankAccount =  acno, acname, balance + withdraw() { }
+							deposit() { }
+							changeName() { }
+							
+
+		Cat = color, age, breed, weight +  drinkMilk() { }
+							chaseMice() { }
+							snooze() { }
+							meow() { }
+
+
+		Car = color, model, millage, hp, price + accelerate(), changeGear()
+							applyBrake() 
+							openDor(), lockDoor(), closeDoor()
+							takeReverse(), turnRight()
+							turnLeft()
+							...
+
+		mobile = model, color, screensize	+ lock() unlock()
+				keypad, ramsize		calling(), dialing()
+				numberOfSimSlots	sendSMS(), recieveSMS()
+				cameraPixelCount	connectBT()
+				cost			hotspot()  tethering()
+				weight			captureImage() ca
+			
+
+		employee =   empno, basic, hra, da +   signIn(), signOut()
+				ta, gross, net		doProjectAssignment() { }
+				pf, name, mgr		checkSalary() { }
+				dept, arritime,		checkLeaves() { }
+			deptime,  desg, project		applyForLeave() { }
+			projdeadline
+	
+
+
+  1	ClassName			BankAccount, SavingsAccount, CurrentAccount
+					FixedDepositAccount, 
+
+  2	variableName			rollNumber,  maturityDate,  socialSecurityNumber		
+  3	methodName/functionName		changeSalary(), setLookAndFeel(), depositCash()
+
+  4	packages			NA\
+
+  5	CONSTANTS			PI, SPEED_OF_LIGHT, GRAVITY, MAX MIN AVG NORM
+		
+
+
+	BankAccount.java
+
+	class BankAccount
+	{
+		data
+		+
+		function
+	} 
+	
+
+			A					B
+	
+			classes			vs		object
+			|					|
+		blue print of a house				a house 
+		it is a design of an "object"		it is an instance of a "class"
+
+		class BankAccount			BankAccount baObj = new BankAccount();
+		{
+
+		}
+
+
+
+
+
+
+
+
+
+
