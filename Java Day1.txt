@@ -297,31 +297,42 @@ eq MONEY
 
 
 			Day 1
+
+Veni [TL]		Complete	HolidayHome
+Nishant			Complete	Branch
+Kanwar			Complete	Hotel	
 Shashi Bamne		Complete	TwoWheeler
 Ayan			Complete	ClassRoom
-Nimya			Complete	Restaurant
-KrishnaKumar		Complete	AirConditioner
-Suraj			Complete	Book
+
+
+KrishnaKumar [TL]	Complete	AirConditioner
 Mamta			Complete	Shirt
-Srilakshmi		Complete	FeedBackForm
-Jyotsna			Complete	Toy
-Veni			Complete	HolidayHome
-Nidhi			Complete	Library
-Kanwar			Complete	Hotel	
-Poornima		Complete	Acquarium
+Suraj			Complete	Book
 Deepmala		Complete	ReportCard
-Ruchi			Complete	Trading
-Sandeep			Complete	GasBill
 Sagar			Complete	Company
-Mayur			Complete	Movie
-Vignesh			Complete	Vehicle
-Swaraj			Complete	Food
-Avinash			Complete	KFC
+
+
+Poornima [TL]		Complete	Acquarium
 Jayendra		Complete	Laptop
-Nishant			Complete	Branch
+Srilakshmi		Complete	FeedBackForm
 Rajendra		Complete	FoodRestaurant
+Nimya			Complete	Restaurant
+
+
+Vignesh [TL]		Complete	Vehicle
+Nidhi			Complete	Library
+Avinash			Complete	KFC
+Mayur			Complete	Movie
 Pawan			Complete	LearningGuitar
+
+
+Ruchi [TL]		Complete	Trading
+Jyotsna			Complete	Toy
+Sandeep			Complete	GasBill
 Sourabh			Complete	AirConditioner
+Swaraj			Complete	Food
+
+
 	
 
 
