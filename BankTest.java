@@ -1,10 +1,35 @@
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.TextField;
 import java.time.LocalDate;
+
 
 public class BankTest {
 
 	public static void main(String[] args) {
 
+		Button b1 = new Button("OK");
+		Button b2 = new Button("CANCEL");
 		
+		TextField t = new TextField(20);
+		TextArea ta = new TextArea(5,20);
+		
+		FlowLayout fl = new FlowLayout();
+		
+		Frame f = new Frame();
+		
+		f.setLayout(fl);
+		
+		f.add(t);
+		f.add(ta);
+		f.add(b1);
+		f.add(b2);
+		
+		f.setLocation(100,400);
+		f.setSize(500,800);
+		f.setVisible(true);
 		/*LocalDate   sampleDate = LocalDate.of(2022, 3, 25);
 		
 		System.out.println("date is "+sampleDate);
@@ -22,6 +47,13 @@ public class BankTest {
 		BankAccount baObj5 = new BankAccount();
 		
 		baObj1.setBankAccount(101, "Shashi Bamne", 90000.0f, LocalDate.of(2019, 1, 10), LocalDate.of(2000, 6, 10));
+		baObj1.printBankAccount();
+		
+		baObj1.withdraw(95000);
+		baObj1.printBankAccount();
+		
+		//baObj1.calculateSimpleInterest();
+		baObj1.deposit(50001);
 		baObj1.printBankAccount();
 
 		baObj1.changeAccountHolderName("SHASHI BAMNE");
@@ -53,12 +85,12 @@ public class BankTest {
 class BankAccount
 {
 	//DATA-MEMBER / fields  SECTION
-	int accountNumber;
-	String accountHolderName;
-	float accountBalance;
-	LocalDate accountOpeningDate;
-	LocalDate accountHolderBirthdate;
-	int age;
+	private int accountNumber;
+	private String accountHolderName;
+	private float accountBalance;
+	private LocalDate accountOpeningDate;
+	private LocalDate accountHolderBirthdate;
+	private int age;
 	
 	//MEMBER-FUNCTIONS / methods SECTION
 	
@@ -82,21 +114,37 @@ class BankAccount
 		System.out.println("Account Opening Date : "+accountOpeningDate);
 		System.out.println("Account Holder DOB   : "+accountHolderBirthdate);
 		System.out.println("Bank Holder's Age    : "+age+" years");
+		float si = calculateSimpleInterest();
+		System.out.println("Bank SI              : "+si);
+		
+				
 		System.out.println("---------------------");
 	}
 	
 	float withdraw(float amountToWithdraw) {
 		System.out.println("withdrawing...."+amountToWithdraw);
-		accountBalance = accountBalance - amountToWithdraw;
+		if(amountToWithdraw > accountBalance) {
+			System.out.println("Insufficient funds...!!!!");
+		}
+		else {
+			accountBalance = accountBalance - amountToWithdraw;
+		}
+		
 		return accountBalance;
 	}
 	float deposit(float amountToDeposit) {
 		System.out.println("Depositing...."+amountToDeposit);
-		accountBalance = accountBalance + amountToDeposit;
+	
+		if(amountToDeposit > 50000) {
+			System.out.println("please specify the source of the income...");
+		}
+		else {
+			accountBalance = accountBalance + amountToDeposit;
+		}
 		return accountBalance;
 	}
 	
-	float calculateSimpleInterest() {
+	private float calculateSimpleInterest() {
 		System.out.println("Calculating simple interest....");
 		float si = accountBalance * 1 * 2.5f / 100;
 		return si;
