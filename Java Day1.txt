@@ -295,47 +295,65 @@ eq MONEY
 
 ===========================================================================================
 
+	9820 44 34 64
 
 			Day 1
 
-Veni [TL]		Complete	HolidayHome
+Veni [TL]		Complete	HolidayHome	- General Insurance 
 Nishant			Complete	Branch
 Kanwar			Complete	Hotel	
 Shashi Bamne		Complete	TwoWheeler
 Ayan			Complete	ClassRoom
 
 
-KrishnaKumar [TL]	Complete	AirConditioner
+KrishnaKumar [TL]	Complete	AirConditioner	- Scheme For Farmers
 Mamta			Complete	Shirt
 Suraj			Complete	Book
 Deepmala		Complete	ReportCard
 Sagar			Complete	Company
 
 
-Poornima [TL]		Complete	Acquarium
+Poornima [TL]		Complete	Acquarium	- Online Banking
 Jayendra		Complete	Laptop
 Srilakshmi		Complete	FeedBackForm
 Rajendra		Complete	FoodRestaurant
 Nimya			Complete	Restaurant
 
 
-Vignesh [TL]		Complete	Vehicle
+Vignesh [TL]		Complete	Vehicle		- Online Shopping
 Nidhi			Complete	Library
 Avinash			Complete	KFC
 Mayur			Complete	Movie
 Pawan			Complete	LearningGuitar
 
 
-Ruchi [TL]		Complete	Trading
+Ruchi [TL]		Complete	Trading		- Vehicle Loan
 Jyotsna			Complete	Toy
 Sandeep			Complete	GasBill
 Sourabh			Complete	AirConditioner
 Swaraj			Complete	Food
 
 
+	hi am vishal, i im into Trading of AirConditioner, i have my Vehicle and driving 
+	for a Movie, suddenly thought to buy Food from a FoodRestaurant known as KFC
+	...
+
+
+
+	class Violin
+	{
+	}
+	class Cello extends Violin
+	{
+	}
 	
+	
+		class Movie  extends Cinema //isA
+		{	
+			Hero h = new Hero(); //hasA
 
-
+		}
+	
 	Personal victory
 	1. Be proactive
 	2. begin with the end in mind
@@ -467,6 +485,13 @@ https://github.com/vishhaldawane/Projects
 			private method - method encapsulation
 
 		3. Polymorphism
+			ability of a business entity to aquire multiple forms
+			a. class extension
+			b. function overloading
+			c. function overriding -> we have overridden this -> toString()
+			d. operator overloading
+
+		
 
 		4. Inheritance
 	
@@ -482,6 +507,95 @@ https://github.com/vishhaldawane/Projects
 	Mamta 	
 
 
+==============================================================================
+Day 3
+
+
+
+				Data types
+					|
+			--------------------------------
+			|				|
+			Primitive			secondary
+			|				|
+	------------------------------------		Object
+	|	|	|	|			   |
+  Integral  Floating  Character Boolean			---------------------------
+  byte	1   float  4  char 2	boolean 1			|
+  short 2   double 8	ASCII		true/false		String
+  int   4		256
+  long	8		UNICODE
+			65535
+
+
+		Joker j = new Joker();
+		SavingsAccount sa = new SavingsAccount();
+
+		int i = 100;
+		i++;
+
+		Integer j = new Integer(100);
+		j.someFunction();
+		
+	Wrapper Classes
+	|
+	byte	Byte	
+	short 	Short
+	int	Integer
+	long 	Long
+	float	Float
+	double	Double
+	char	Character
+	boolean Boolean
+	
+
+			
+
+
+
+
+
+
+
+	Constructor
+	|
+
+	is a special function
+	- it has the same name as of the enclosing class
+	- it does not have return type
+	- but it can take arguments
+	- it is automtically invoked during the object creation process
+	
+	- IT IS USED TO INITIALIZE THE STATE OF THE OBJECT
+
+	- IT IS CALLED ONCE PER OBJECT
+
+
+	- JPL provides a default constructor with every class
+	- it is also known as implicit no-arg ctor
+
+	- however a developer can provide user defined explicit ctor
+
+	- u can have either implicit or explicit but not both
+
+
+
+
+	Tractor	tractorObj = new Tractor();
+	|	|	      |	      |	
+   classname  refToTractor Allocator constructor
+		object
+
+	class Tractor
+	{
+		int tractorId;
+		String tractorBrand;
+
+		Tractor()
+		{
+		}
+	}
+	
 
 
 
@@ -496,6 +610,18 @@ https://github.com/vishhaldawane/Projects
 
 
 
+
+	Passing object as an argument to a function
+	Returning object as a return value from a function
+
+
+	class A
+	{
+		void fun(int i)
+		{
+
+		}
+	}
 
 
 
