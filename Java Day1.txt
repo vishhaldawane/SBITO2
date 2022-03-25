@@ -623,7 +623,104 @@ Day 3
 		}
 	}
 
+=====================================================================
+Day 5
 
+			field		method		class
+
+	abstract	NA		without code	a class with 
+					body		abstract methods[optional]
+
+		abstract class BankAccount {
+
+		}
+				|acno name balance
+				| withdraw(), deposit()
+		----------------------------------------
+		|		|		|
+	SavingsAccount	 CurrentAccount	   CreditAccount
+	|rate			|odLimit	|creditLimit,cashLimit	
+	FixedDepositAccount	
+	|maturityPeriod=3
+
+	class BankAccount
+	{
+
+	}
+
+				drawing
+				|
+		--------------------------------
+		|		|		|		|
+		JupitorSurface	Lava		Forest		colouredRiver
+	
+
+
+
+		Abstract class
+		-------------------
+				it is a partial contract 
+				it may have abstract methods
+
+				classes implementing abstract class must implement
+				the abstract methods, or declare themselves as abstract
+				- it can have non-abstract methods too
+
+				- an abstract class cannot be final
+
+
+		Abstract method
+		-----------------
+				method without code body
+				- must be declared by an abstract class
+	
+
+
+		Interface
+		---------------
+				it is pure abstract class
+
+				it can only have abstract methods
+
+				by default interfaces methods are abstract,public
+
+				by default interface variables are public, static, final
+
+
+
+
+	Packages 
+	--------------
+			to organize the relevant classes in a folder/directory
+
+			similar to directories in os
+
+
+					jungle
+					|
+			-----------------------------------------------------
+			|		|		|		|
+			river		cave		tree		use
+			|		|		|		|
+		Crocodile.java	  Tiger.java	Monkey.java	   Test.java
+		-----------
+		package jungle.river;
+		class Crocodile
+		{
+
+		}
+
+					
+				ACCESS SPECIFIERS
+			
+			1.        <-- default/friendly/accessible within its own folder
+			2. public <-- available to the whole project/internet
+
+			3. private <-- only referred by the class in which they are declared
+			4. protected <-- referred by the child class too
+
+
+		FIELD		METHOD 		CLASS
 
 
 
