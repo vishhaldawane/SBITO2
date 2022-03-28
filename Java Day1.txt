@@ -723,6 +723,204 @@ Day 5
 		FIELD		METHOD 		CLASS
 
 
+========================================================================
+
+		PF	   IQ		EQ	SQ
+		physical + mental + emotional + spiritual
+		body	   mind	    heart	soul
+
+
+
+
+
+
+
+
+
+
+
+	Exceptiion handling
+	--------|------------
+		Runtime error
+
+
+
+	compile		runtime		linker 		fatal		logical
+	|		|		|		|		|
+	synatx		exception	missing 	death of your	a+b  = 16
+					library		app
+
+
+
+
+
+
+
+
+	javac <- compiler
+	java  <-- interpreter
+
+				Object
+				|
+				--------------
+					|
+					Throwable
+					|	
+				----------------------
+				|		|X
+				Error		Exception		
+						| "checked" by the compiler
+			--------------------------------------------------------------------------------------------------------------
+			|		|		|		|A				|B			|			|
+		RuntimeException	IOException  SQlException 	DogsAgeExceededException DogsAgeNegativeException  DogsNameInvalidException		PanCardNotFoundException  InvalidPhotoException  AdharNotFoundException   InsufficientOpeningBalanceException
+		| "unchecked"			|
+		| ignored by the compiler	FileNotFoundException
+		| not checked by the compiler
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+  |			|	 |			|			|				|				|
+ArithmeticException*	|	 NullPointerException	NoSuchElementException RedSignalDishonouredException	PayeeNotFoundException	InvalidIFSCCodeException
+		IndexOutOfBoundsException			|
+			|					InputMismatchException*
+	----------------------------------------
+		|			|
+ArrayIndexOutOfBoundsException 	StringIndexOutOfBoundsException
+				
+
+ Checked exceptions "need to be declared" 	   in a method or constructor's throws clause 
+ Unchecked exceptions "do not need to be declared" in a method or constructor's throws clause 
+
+
+
+
+
+
+
+
+	class Doctor
+	{
+	}
+	class Surgeon extends Doctor
+	{
+
+	}
+	class Heart....
+
+
+	
+
+	class BankService
+	{
+		BankAccount openBankAccount(AccountOpeningForm form) throws PanCardNotFoundException,  InvalidPhotoException, AdharNotFoundException, InsufficientOpeningBalanceException
+		{
+			throw ...
+
+			throw....
+
+			throw ...
+
+			throw..
+
+			throw.. some column is not filled up....
+			
+			throw.
+			
+		}
+	}
+
+
+
+20
+21
+22
+23
+24
+
+
+
+
+					Runnable		Vehicle
+					| run();		  |	
+					|			  |	
+					------------------------- |
+					|	     implements	| |extends
+					Thread			Car
+					|
+					|start() { } ---> JVM's Thread scheduler
+					|				|
+					| run() { } <-------------------+
+					|
+			------------------------------
+			|
+			Message
+			run() { }
+
+
+	Thread = series of statements
+
+	Accounts master
+	---------------------------
+	101 Suresh 70000 -> book mark  t3 
+	102 Dinesh 60000
+	103 Ritesh 80000
+	..
+	105
+	106
+	119
+	201
+
+					Cash Deposit Counter
+	
+			1..10000	10001-20001	20001-30000
+			Teller1		Teller2		Teller3
+			|		|		|
+			getBalance();	getBalance();	getBalance();
+			|		|		|
+			calcAmt();	calcAmt();	calcAmt();
+			|		|		|
+			setBalance();	setBalance();	setBalance();
+			|		|		|
+			Customer1	Customer2	Customer3
+	a/c : 		101		101		101
+	time:		10.30am		10.30am		10.30am
+	cash:		5000/-		7000/-		8000/-
+	deno: 		500Rs 		100Rs		2000Rs
+	cnt : 		10 notes	70 notes	4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

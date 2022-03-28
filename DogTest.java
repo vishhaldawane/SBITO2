@@ -28,19 +28,27 @@ public class DogTest {
 //   
 		
 		
+		try
+		{
+			
+		}
+		
+		
 			Dog dogObjRef1;
 			try {
-				dogObjRef1 = new Dog(12,"To#@$#mmy");
+				dogObjRef1 = new Dog(-12,"Tommy");
 				System.out.println("dog is "+dogObjRef1);
 			} catch (DogsAgeExceededException e) {
-				System.out.println("Hanlder1 : exception in dogs age : " +e );
+				System.out.println("Handler1 : exception in dogs age : " +e );
 				
 			} catch (DogsAgeNegativeException e) {
-				System.out.println("Hanlder2 : exception in dogs age : " +e);
+				System.out.println("Handler2 : exception in dogs age : " +e);
 			} catch (DogsNameInvalidException e) {
-				System.out.println("Hanlder3 : exception in dogs name : "+e );
+				System.out.println("Handler3 : exception in dogs name : "+e );
 			}
-			
+			finally {
+				System.out.println("finally executed regardless of the exceptions");
+			}
 		
 		
 		
