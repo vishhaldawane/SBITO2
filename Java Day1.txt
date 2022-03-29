@@ -889,6 +889,26 @@ ArrayIndexOutOfBoundsException 	StringIndexOutOfBoundsException
 
 
 
+					   Iterable
+						|
+					   Collection
+						|
+			-----------------------------------------
+			|linear					|non-linear
+			List					Set		
+			|duplicates				|unique
+		-------------------------		-------------------------
+		|			|		|			|
+		ArrayList	LinkedList		TreeSet			HashSet
+
+
+
+
+	array - container - 
+			- to hold same type of data
+			- fixed width
+			
+
 
 
 
