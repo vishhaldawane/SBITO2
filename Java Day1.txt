@@ -914,12 +914,82 @@ ArrayIndexOutOfBoundsException 	StringIndexOutOfBoundsException
 
 
 
+	JDBC - java database connectivity
 
 
 
+	1. DATABASE 
+
+		a. goto hsqldb.org
+		b. Download lastest version : 
+			download -> hsqldb.2.6.1.zip
+		c. it is on this site : 
+			https://sourceforge.net/projects/hsqldb/files/
+		d. extract this zip file
+
+		e. A -> goto that folder's lib -> at at the URL -> cmd
+			https://github.com/vishhaldawane/SBITO2/blob/main/hsqldb.txt
+			|
+			java -cp hsqldb.jar org.hsqldb.server.Server --database.0 file:mydb --dbname.0 xdb
+		
+			
+
+		f. B ->goto that folder's lib -> at at the URL -> cmd
+			start the INTERFACE to work with this server
+			|
+			java -jar hsqldb.jar
+
+	driver   : org.hsqldb.jdbc.JDBCDriver
+	url      : jdbc:hsqldb:hsql://localhost/xdb
+	username : SA
+	password :   
+
+CREATE TABLE FRIENDS
+(
+   FRIEND_ID  INT,
+  FRIEND_NAME VARCHAR(20),
+  FRIEND_TYPE VARCHAR(20)
+);
 
 
+	INSERT INTO FRIENDS VALUES (101,'Jack','mutual');
+	INSERT INTO FRIENDS VALUES (102,'Jane','family');
+	INSERT INTO FRIENDS VALUES (103,'Jill','office');
+	INSERT INTO FRIENDS VALUES (104,'Janet','college');
+	INSERT INTO FRIENDS VALUES (105,'Julie','school');
 
+
+	1. know your database - HSQLDB
+	2. know the driver for that database - org.hsqldb.jdbc.JDBCDriver
+
+			who will provide the driver
+			a. JAVA (1) - JdbcOdbcDriver
+			b. Database vendor (2) -  org.hsqldb.jdbc.JDBCDriver
+			c. third party
+
+		
+				+-------------------------------> DATABASE
+				|					mysql
+			Java Application				oracle
+									hsqldb*
+									ms-sql
+									sybase
+									postgre
+									teradata
+									hana
+			
+	* following is NOT an inheritance diagram
+
+				java.sql.Driver
+					 |   |
+					 |  org.hsqldb.jdbc.JDBCDriver	
+					 |
+					 |produced
+				   Connection 
+
+	3. Load the driver
+	4. connect to the database
+	5. create a desired statement
 
 
 
