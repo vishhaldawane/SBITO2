@@ -3,11 +3,17 @@ public class Test {
 
 	public static void main(String[] args) {
 	// TODO Auto-generated method stub
-		BankAccount baObj = new BankAccount(90000);
+		BankAccount baObj = new BankAccount(9000);
+		baObj.showBalance();
+		
 		AccountRepository accRepo = new AccountRepository(baObj);
-		AccountController accControl = new AccountController(accRepo);
+		AccountService accService = new AccountService(accRepo);
+		AccountController accControl = new AccountController(accService);
+		
 		AngularForm	angForm = new AngularForm(accControl);
-		angForm.withdraw(50000);
+		angForm.withdraw(5000);
+		baObj.showBalance();
+		
 		
 	}
 
@@ -24,6 +30,9 @@ class BankAccount	{
 	void showBalance() {
 		System.out.println("Balance : "+balance);
 	}
+	float getBalance() {
+		return balance;
+	}
 }
 class AccountRepository	{
 	BankAccount baObj;
@@ -35,16 +44,40 @@ class AccountRepository	{
 	void withdraw(float amt) {
 		baObj.withdraw(amt);
 	}
+	float getBalance() {
+		return baObj.getBalance();
+	}
 }
-class AccountController	{
+class InsufficientBalanceException extends RuntimeException 
+{
+	InsufficientBalanceException(String str) {
+		super(str);
+	}
+}
+class AccountService
+{
 	AccountRepository accRepo;
-	
-	AccountController(AccountRepository	 ref) {
-		System.out.println("AccountController(AccountRepository)...ctor...");
+	AccountService(AccountRepository ref) {
+		System.out.println("AccountService(AccountRepository)...ctor...");
 		accRepo = ref;
 	}
 	void withdraw(float amt) {
-		accRepo.withdraw(amt);
+		if(accRepo.getBalance() > amt)
+			accRepo.withdraw(amt);
+		else
+			throw new InsufficientBalanceException("Balance is not sufficient to withdraw : "+amt); 
+	}
+}
+
+class AccountController	{
+	AccountService accService;
+	
+	AccountController(AccountService ref) {
+		System.out.println("AccountController(AccountService)...ctor...");
+		accService = ref;
+	}
+	void withdraw(float amt) {
+		accService.withdraw(amt);
 	}
 }
 class AngularForm	{
