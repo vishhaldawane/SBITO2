@@ -1,26 +1,61 @@
+
 public class Test {
+
 	public static void main(String[] args) {
-		Tiger t = new Tiger();
-		t.roar();  t.hunt("deer");
-		int c = t.jump(7, 8); System.out.println("Tiger covered.."+c+" feet area");
-		int s = t.swimming(); System.out.println("Tiger swam : "+s+" meters");
+	// TODO Auto-generated method stub
+		BankAccount baObj = new BankAccount(90000);
+		AccountRepository accRepo = new AccountRepository(baObj);
+		AccountController accControl = new AccountController(accRepo);
+		AngularForm	angForm = new AngularForm(accControl);
+		angForm.withdraw(50000);
+		
+	}
+
+}
+class BankAccount	{
+	float balance;
+	BankAccount(float b) {
+		balance = b;
+	}
+	void withdraw(float amt) {
+		System.out.println("BankAccount(float): withdraw: "+amt);
+		balance = balance - amt;
+	}
+	void showBalance() {
+		System.out.println("Balance : "+balance);
 	}
 }
-class Tiger
-{
-	void roar() {
-		System.out.println("Tiger is roaring..");
+class AccountRepository	{
+	BankAccount baObj;
+	
+	AccountRepository(BankAccount ref) {
+		System.out.println("AccountRepository(BankAccount)...ctor...");
+		baObj = ref;
 	}
-	void hunt(String theHuntedAnimal) {
-		System.out.println("Tiger is hunting...."+theHuntedAnimal);
+	void withdraw(float amt) {
+		baObj.withdraw(amt);
 	}
-	int jump(int length, int height) {
-		System.out.println("Tiger is jumping...");
-		int cover = length * height;
-		return cover;
+}
+class AccountController	{
+	AccountRepository accRepo;
+	
+	AccountController(AccountRepository	 ref) {
+		System.out.println("AccountController(AccountRepository)...ctor...");
+		accRepo = ref;
 	}
-	int swimming() {
-		System.out.println("Tiger is swimming...10 meters");
-		return 10;
+	void withdraw(float amt) {
+		accRepo.withdraw(amt);
+	}
+}
+class AngularForm	{
+	
+	AccountController	accCtrl;
+	
+	AngularForm(AccountController ref) {
+		System.out.println("AngularForm(AccountController)...ctor...");
+		accCtrl = ref;
+	}
+	void withdraw(float amt) {
+		accCtrl.withdraw(amt);
 	}
 }
