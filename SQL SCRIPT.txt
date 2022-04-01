@@ -1,5 +1,4 @@
-REM   Script: DAY 10 _ SQL
-REM   SQL QUERY
+
 
 CREATE TABLE DEPT ( 
  DEPTNO              NUMBER(2) NOT NULL, 
