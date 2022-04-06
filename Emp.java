@@ -5,10 +5,13 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="employee_tbl")
+@NamedQuery(name = "allEmpEarning3kAbove", query = "select e from Emp e where e.salary>=:tempsal")
+@NamedQuery(name = "allEmpEarning2kTo3k", query = "select e from Emp e where e.salary>=:lowsal and e.salary<=:highsal")
 public class Emp {
 
 	@Id
