@@ -1,4 +1,4 @@
-package nativequery;
+package entity;
 
 import java.time.LocalDate;
 
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="emp")
+@Table(name="employee_tbl")
 public class Emp {
 
 	@Id
@@ -27,7 +27,7 @@ public class Emp {
 	@Column(name="HIREDATE")
 	private LocalDate hiredate;
 	
-	@Column(name="SAL")
+	@Column(name="EMP_SAL")
 	private int salary;
 	
 	@Column(name="COMM")
