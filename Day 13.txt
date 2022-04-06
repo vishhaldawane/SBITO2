@@ -1,0 +1,164 @@
+
+
+	1. table design
+	2. oo design - pojo	
+	------------------------------------
+	3. repo
+	|
+	4. service
+	|
+	5. controller - core java program
+	|
+	6. ui
+
+
+		30 - 10 
+
+
+		A	B	C			D	E
+		|	|	|			|	|
+		reg	login	dash			transf	statement
+		..	..	..			..	..
+		5	5	5			5	5
+		Form	Login	SavingsAccount		Payee	Statement
+	
+	Krishnakumar
+	|
+	------------------------------------------
+	|	|	|	 |
+	Suraj	Mamtha	DeepMala Sagar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			abstract BillingDetails
+				| id, owner, accountNumber
+				|	
+		-------------------------------------
+			|			|
+		BankAccount			CreditCard
+		|					|
+		bankName				type
+		ifscCode				expiryMonth
+							expiryYear
+	
+
+1) SINGLE TABLE PER HIERARCHY
+billingdetails1
+-----------------	
+
+<-----BillingDetails--------->				   +
+		+
+				<-----BankAccount--------->
+1	2	3		4		5		<------CredicCard---------------->	
+								6	7		8
+billing	id	owner	accountNumber	bankName	ifscCode	type	expiryMonth	expiryYear
+_type
+
+BA	1	Jack	123		ICICI		ICIC92929A	-	-		-
+CC	2	Jane	445		-		-		VISA	Jan		2023
+BA	3	Smith	555		HDFC		HDF838334	-	-		-
+CC	4	King	999		-		-		Rupee	Feb		2025
+
+
+
+2) JOINED TABLE STRATEGY
+billingdetails2
+-----------------	
+
+<-----BillingDetails--------->	
+(PK)
+id	owner	accountNumber	
+1	Jack	123		
+2	Jane	445		
+3	Smith	555		
+4	King	999		
+
+BANKACCOUNT
+-----------------	
+bankName	ifscCode	billing_id(FK)
+ICICI		ICIC92929A	1
+HDFC		HDF838334	3
+
+CREDITCARD
+--------------
+type	expiryMonth	expiryYear billing_id(FK)
+VISA	Jan		2023	   2	
+Rupee	Feb		2025	   4
+
+
+
+3) TABLE PER CLASS
+---------------------------
+
+BILLINGDETAILS
+----------------
+id	owner	accountNumber	
+1	Jack	123	<--
+2	Jane	445	<------------
+3	Smith	555	<--
+4	King	999	<------------
+
+BANKACCOUNT
+-----------------	
+bankName	ifscCode	id	owner	accountNumber
+ICICI		ICIC92929A	1	Jack	123	
+HDFC		HDF838334	3	Smith	999	
+
+
+CREDITCARD
+--------------
+type	expiryMonth	expiryYear id	owner	accountNumber
+VISA	Jan		2023	   2	Jane	445			
+Rupee	Feb		2025	   4	King	999
+	
+
+
+4) MAPPED SUPER CLASS
+---------------------------
+
+BANKACCOUNT
+-----------------		<------BillingDetails-------->
+bankName	ifscCode	id	owner	accountNumber
+ICICI		ICIC92929A	1	Jack	123	
+HDFC		HDF838334	3	Smith	999	
+
+
+CREDITCARD
+--------------			   <------BillingDetails-------->
+type	expiryMonth	expiryYear id	owner	accountNumber
+VISA	Jan		2023	   2	Jane	445			
+Rupee	Feb		2025	   4	King	999
+	
+
+
+
+	- native sql query
+
+	- jpql 
+
+	- named query
+
+	alter table employee_tbl alter column sal rename to salary
+
+
+
+
+
+
+
+
+
+
+
+		
