@@ -1,86 +1,69 @@
-import java.time.LocalDate;
+package strategy1;
 
-abstract class BankAccount
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity(name="bankaccount1")
+@DiscriminatorValue("BA")
+public class BankAccount extends BillingDetails {
+
+	private String bankName;
+	private String ifscCode;
+	
+	public String getBankName() {
+		return bankName;
+	}
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+	public String getIfscCode() {
+		return ifscCode;
+	}
+	public void setIfscCode(String ifscCode) {
+		this.ifscCode = ifscCode;
+	}
+	
+	
+	
+	
+	
+	
+}
+
+/*class Test
 {
-	//DATA-MEMBER / fields  SECTION
-	private int accountNumber;
-	private String accountHolderName;
-	private float accountBalance;
-	private LocalDate accountOpeningDate;
-	private LocalDate accountHolderBirthdate;
+	public static void main(String[] args) {
+		Person p = new Person();
+		p.setAge(20);
+	}
+}
+
+// creation		vs		accesss
+
+class Person
+{
 	private int age;
 	
-	//MEMBER-FUNCTIONS / methods SECTION
-
-	public BankAccount(int accountNumber, String accountHolderName, float accountBalance, LocalDate accountOpeningDate, LocalDate accountHolderBirthdate) {
-		
-		System.out.println("Setting the bank account details....");
-		this.accountNumber = accountNumber;
-		this.accountHolderName = accountHolderName;
-		this.accountBalance= accountBalance;
-		this.accountOpeningDate = accountOpeningDate;
-		this.accountHolderBirthdate = accountHolderBirthdate;
-		
-		LocalDate todaysDate = LocalDate.now();
-		
-		this.age = todaysDate.getYear() - accountHolderBirthdate.getYear();
-	}
-	
-	
-
-	@Override
-	public String toString() {
-		return "BankAccount [accountNumber=" + accountNumber + ", accountHolderName=" + accountHolderName
-				+ ", accountBalance=" + accountBalance + ", accountOpeningDate=" + accountOpeningDate
-				+ ", accountHolderBirthdate=" + accountHolderBirthdate + ", age=" + age + "]";
-	}
-
-	void printBankAccount() {
-		System.out.println("Bank Account Number  : "+accountNumber);
-		System.out.println("Bank Holder Name     : "+accountHolderName);
-		System.out.println("Bank Account Balance : Rs."+accountBalance+"/-");
-		System.out.println("Account Opening Date : "+accountOpeningDate);
-		System.out.println("Account Holder DOB   : "+accountHolderBirthdate);
-		System.out.println("Bank Holder's Age    : "+age+" years");
-		float si = calculateSimpleInterest();
-		System.out.println("Bank SI              : "+si);
-		
-				
-		System.out.println("---------------------");
-	}
-
-	float withdraw(float amountToWithdraw) {
-		System.out.println("withdrawing...."+amountToWithdraw);
-		if(amountToWithdraw > accountBalance) {
-			System.out.println("Insufficient funds...!!!!");
+	void setAge(int a) {
+		if(a < 0 ) {
+			throw new RuntimeException("age cannot be in negative....");
 		}
-		else {
-			accountBalance = accountBalance - amountToWithdraw;
-		}
-		
-		return accountBalance;
+		else if(a > 120 ) {
+			throw new RuntimeException("age cannot exceeed 120...");
+		} 
+		else
+			age = a;
 	}
-	float deposit(float amountToDeposit) {
-		System.out.println("Depositing...."+amountToDeposit);
-	
-		if(amountToDeposit > 50000) {
-			System.out.println("please specify the source of the income...");
-		}
-		else {
-			accountBalance = accountBalance + amountToDeposit;
-		}
-		return accountBalance;
-	}
-	
-	private float calculateSimpleInterest() {
-		System.out.println("Calculating simple interest....");
-		float si = accountBalance * 1 * 2.5f / 100;
-		return si;
-	}
-
-	void changeAccountHolderName(String newName) {
-		System.out.println("changing the account holder's name to "+newName);
-		accountHolderName = newName;
-	}
-	//BankAccount() { }
 }
+
+class Student extends Person
+{
+	
+	private int roll;
+	
+	void show() {
+		age=1000;
+		setAge(1000);
+	}
+}
+*/
