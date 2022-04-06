@@ -1,10 +1,11 @@
-package strategy1;
+package strategy2;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
-@Entity(name="bankaccount1")
-@DiscriminatorValue("BA")
+@Entity(name="bankaccount2")
+@PrimaryKeyJoinColumn(name="billing_id", referencedColumnName = "id")
 public class BankAccount extends BillingDetails {
 
 	private String bankName;

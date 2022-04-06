@@ -1,4 +1,4 @@
-package strategy1;
+package strategy2;
 
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -7,10 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-@Entity(name="billingdetails1")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="billing_type")
-public abstract class BillingDetails {
+@Entity(name="billingdetails2")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class BillingDetails {
 
 	@Id
 	@GeneratedValue

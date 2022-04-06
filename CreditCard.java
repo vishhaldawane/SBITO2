@@ -1,10 +1,12 @@
-package strategy1;
+package strategy2;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
-@Entity(name="creditcard1")
-@DiscriminatorValue("CC")
+@Entity(name="creditcard2")
+@PrimaryKeyJoinColumn(name="billing_id", referencedColumnName = "id")
+
 public class CreditCard extends BillingDetails {
 	
 	String cardType;
