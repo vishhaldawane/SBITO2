@@ -1,59 +1,52 @@
+package com.sbi.emp;
+
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-//1. create a pojo
 
-/*
- * create table emp_tbl
- * (
- * 		emp_no int primary key,
- * 		emp_name varchar(20),
- * 		emp_job varchar(20),
- * 		emp_doj date,
- * 		emp_sal int,
- * );
- * 
- * 		Object	Relation	Mapping
- */
-@Entity
-@Table(name="emp_tbl")
+
 public class Employee {
-
-
-	@Id
-	@GeneratedValue
-	@Column(name="emp_no")
+	
 	private int employeeNumber;
-	
-	@Column(name="emp_name", length = 20)
 	private String name;
-	
-	@Column(name="emp_job", length = 20)
 	private String job;
-	
-	@Column(name="emp_doj")
+	private Integer manager;
 	private LocalDate joiningDate;
-	
-	@Column(name="emp_sal")
 	private double salary;
-	
-	@Column(name="emp_age")
-	private Integer age;
-	
-	
-	
-	
-	public Integer getAge() {
-		return age;
+	private Integer comm;
+	private Integer deptno;
+
+	public Integer getManager() {
+		return manager;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setManager(Integer manager) {
+		this.manager = manager;
+	}
+
+	public Integer getComm() {
+		return comm;
+	}
+
+	public void setComm(Integer comm) {
+		this.comm = comm;
+	}
+
+	public Integer getDeptno() {
+		return deptno;
+	}
+
+	public void setDeptno(Integer deptno) {
+		this.deptno = deptno;
 	}
 
 	public Employee() {

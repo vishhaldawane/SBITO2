@@ -1,0 +1,193 @@
+
+		tuning fork 
+
+	fork1					fork2
+	-----					-----
+	
+
+	human
+	|
+	Heart - Brain
+	30	1	
+
+
+Day 14
+----------
+			object = data + function
+
+		Spring - software container with DI capabilities
+
+		DI - dependency Injection - IoC
+
+		
+
+
+		ServerSocket serv = new ServerSocket(); - server machine
+
+	Features EA
+
+	1. Remote capability - Networking - java.net
+		Socket s = new Socket(); <-- client machine
+
+	2. HA - infrastructure team - 24 x 7 
+
+	3. MT - Thread t = new Thread(); - java.lang
+
+	4. Pooling of resources
+
+	5. Caching of resource
+
+	6. TM			-- ORM persist - 
+		begin and commit
+			fundTransfer()
+			{
+			
+				o1=dao.find(source);
+				o2=dao.find(target);
+				o1.setter..
+				o2.setter..	
+				dao.merge(o1);
+				dao.merge(o2);
+			
+			}
+	7. SM
+
+
+
+
+
+	DL->					Database - Machine1
+						|
+						ORM
+						|
+	Machine2 [
+		    BL->	"Enterprise" application - "Banking App" s/w
+					    |	Insurance Airline .. ....
+			Enterprise[7] Application Server - s/w	
+						|		 ]
+						|
+		------------------------------------------
+		|	|	|	|	|	|
+	PL->	PC	ATM	Visa	IVR	SMS	MobileApp
+		|	|	|POS	 |	 |	| ios app
+	  Machine3  Machine4 VisaMachine Machine view	android app
+
+
+		
+	BEA - WebLogic
+	Sun Microsystems - Java
+
+Enterprise[7] Application Server
+	- Oracle - WebLogic
+
+	- IBM - WebSphere Application Server - WAS
+
+	- Redhat - JBoss
+
+	
+		ORM - framework 
+
+		spring framework - open source community
+
+
+		framework = semi developed application -  90%
+
+
+
+				picnic
+				|
+			-------------------
+			|		|
+			self		tours and travels
+
+
+
+
+	jar -cvf <-- create a jar file
+			-v verbose
+			-f to specify the filname
+
+
+
+	
+	jar -tvf jarfilename -> too the table of contents in the jar file
+
+	jar -uvf jarfilename newClassName -- to update the jar file 
+
+	jar -xvf jarFilename -- to extract from the jar file
+
+
+
+
+
+
+
+
+
+
+			SpringProject
+				|
+			-------------------------
+			|		|
+			src		pom.xml
+			|
+		-------------------------
+		|			|
+		main			test
+		|			|
+	-----------------		|
+	|		|		|
+	java		resource	java
+	|		|		|
+	all	    myspring.xml	all test cases
+	your		|
+	classes		xml based
+	here		config of
+	Car		all the beans
+	Engine
+	Piston
+
+
+
+	JDBC : 1. driver 2. url	3. username 4 . password
+		DriverManager.registerDriver...
+		Connection conn = DriverManager.getConnection....
+		
+		
+		DataSource <-- interface javax.sql
+		|
+		------------------
+				|
+			1 SpringDriverManagerDataSource
+
+
+SpringDriverManagerDataSource a = new SpringDriverManagerDataSource();
+	a.set  driver
+	a.set	url
+	a.set	username
+	a.set	password
+
+		
+
+	Runnable
+	|run();
+	|
+	MyThread
+		
+
+		2 EntityManager
+
+		3 JpaTransactionManager
+	
+
+
+	spring jdbc
+	spring orm
+	spring data jpa
+	spring web/mvc
+	spring rest
+
+	
+
+
+
