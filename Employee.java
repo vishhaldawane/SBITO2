@@ -1,17 +1,6 @@
-package com.sbi.emp;
+package com.sbi.project;
 
 import java.time.LocalDate;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
 
 
 public class Employee {
@@ -19,34 +8,28 @@ public class Employee {
 	private int employeeNumber;
 	private String name;
 	private String job;
-	private Integer manager;
 	private LocalDate joiningDate;
 	private double salary;
-	private Integer comm;
-	private Integer deptno;
-
-	public Integer getManager() {
-		return manager;
+	private Integer age;
+	
+	public Employee(int empno, String name, String job, LocalDate joiningDate, double salary, Integer age) {
+		super();
+		this.employeeNumber = empno;
+		this.name = name;
+		this.job = job;
+		this.joiningDate = joiningDate;
+		this.salary = salary;
+		this.age = age;
+		
+	}
+	
+	
+	public Integer getAge() {
+		return age;
 	}
 
-	public void setManager(Integer manager) {
-		this.manager = manager;
-	}
-
-	public Integer getComm() {
-		return comm;
-	}
-
-	public void setComm(Integer comm) {
-		this.comm = comm;
-	}
-
-	public Integer getDeptno() {
-		return deptno;
-	}
-
-	public void setDeptno(Integer deptno) {
-		this.deptno = deptno;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public Employee() {
@@ -93,8 +76,5 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
-	
-	
-	
+
 }
