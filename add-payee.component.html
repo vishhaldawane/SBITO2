@@ -1,0 +1,54 @@
+
+<!-- value of x is {{x}} <br>
+enter value for x <input type="number" value={{x}} ><br>
+enter value for x <input type="number" [value]=x ><br>
+
+enter value for x <input type="number" [(ngModel)]=x ><br>
+<button (click)="changeIt()"> </button> -->
+<h2> Add Payee </h2>
+<hr>
+<table>
+    <tr>
+        <td>Enter payee account number</td>  
+        <td><input type="number" [(ngModel)]="payeeObj.payeeAccountNumber" 
+            (input)="verifyAccountNumber()"> 
+        </td>
+    </tr>
+    <tr>
+        <td>Re-Enter payee account number</td>
+        <td><input type="password" [(ngModel)]="tempPayeeAccountNumber" 
+            (input)="verifyAccountNumber()"> </td> 
+        <td><span>{{errMsg}}</span> </td>
+    </tr>
+    <tr>
+        <td>Enter payee name </td> 
+        <td> <input type="text" [(ngModel)]="payeeObj.payeeName"> </td>
+    </tr>
+    <tr>
+        <td> Enter payee bank's IFSC Code  </td> 
+        <td> <input type="text" [(ngModel)]="payeeObj.payeeIFSCCode"> </td>
+    </tr>
+    <tr>
+        <td> Enter nick name of the payee </td> 
+        <td><input type="text" [(ngModel)]="payeeObj.payeeNickName"> </td>
+    </tr>
+</table>
+<button (click)="addPayee()"> Add Payee</button>
+<hr>
+
+<table border="3">
+        <th>Payee Account Number</th>
+        <th>Payee Name </th>  
+        <th>Payee's IFSC Code  </th> 
+        <th>Payee Nick Name </th> 
+    <tr *ngFor="let payee of payeeArray" >
+        <td>{{payee.payeeAccountNumber}}</td>
+        <td>{{payee.payeeName}}</td>
+        <td>{{payee.payeeIFSCCode}}</td>
+        <td>{{payee.payeeNickName}}</td>
+        <td> <button>Edit</button> </td>
+        <td><button>Delete</button></td>
+
+    </tr>
+</table>
+
