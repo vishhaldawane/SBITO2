@@ -1,0 +1,16 @@
+Enter principal <input type=number [value]="principal"> <br>
+Enter number of years <input type=number [value]="numberOfYears"> <br>
+Enter rate of interest <input type=number [value]="rate"> <br>
+
+<button (click)="calculateSimpleInterest()"> Calculate </button> <br>
+
+Simple Interest is <input type=text disabled [value]="si">
+<hr>
+
+Enter principal <input type=number [(ngModel)]="principal"> <br>
+Enter number of years <input type=number [(ngModel)]="numberOfYears"> <br>
+Enter rate of interest <input type=number [(ngModel)]="rate"> <br>
+
+<button (click)="calculateSimpleInterest()"> Calculate </button> <br>
+
+Simple Interest is <input type=text disabled [value]="si">
