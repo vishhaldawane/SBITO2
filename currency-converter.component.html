@@ -1,0 +1,21 @@
+<p>currency-converter works!</p>
+
+Select Source Country
+<select [(ngModel)]="sourceCountry">
+    <!-- <option [ngValue]="null" selected disabled>Select Country</option> -->
+    <option *ngFor="let country of allCountries" [ngValue]="country">{{country}}</option>
+</select>
+<br>
+Select Target Country
+<select [(ngModel)]="targetCountry">
+    <option *ngFor="let country of allCountries" [ngValue]="country">{{country}}</option>
+</select>
+<br>
+Enter amount to convert <input type="number" [(ngModel)]="amountToConvert"> <br>
+<button (click)="convert()">Convert</button>
+<hr>
+Selected Source Country : {{sourceCountry}} <br>
+Selected Target Country : {{targetCountry}} <br>
+
+<hr>
+Converted Amount is {{convertedAmount}}
