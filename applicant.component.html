@@ -1,0 +1,46 @@
+<p>applicant works!</p>
+<!-- <button (click)="">Load All Applicants </button> -->
+
+<table border="7" cellspacing="7" cellpadding="7">
+    <th>Applicant Id</th>    <th>Applicant Name</th>    <th>Applicant's Father</th>    <th>Date Of Birth</th>
+    <th>Mobile Number</th>    <th>Occupation</th>    <th>Marital Status</th>    <th>Adhaar Card</th>
+    <th>Pan Card</th>    <th>Photo</th>    <th>Annual Income</th>    <th>Account Type</th>    <th>Application Status</th>
+
+    <tr *ngFor="let applicant of applicantArray">
+        <td>{{applicant.applicantId}}</td>
+        <td>{{applicant.applicantName}}</td>
+        <td>{{applicant.applicantFatherName}}</td>
+        <td>{{applicant.applicantBirthdate}}</td>
+        <td>{{applicant.mobileNumber}}</td>
+        <td>{{applicant.occupation}}</td>
+        <td>{{applicant.married}}</td>
+        <td>{{applicant.adhaarNumber}}</td>
+        <td>{{applicant.panCard}}</td>
+        <td>{{applicant.photo}}</td>
+        <td>{{applicant.annualIncome}}</td>
+        <td>{{applicant.accountType}}</td>
+        
+        <td>
+            {{applicant.applicationStatus}}
+            <button>Approve</button>
+            <button>InProgress</button>
+            <button>Reject</button>
+
+        </td>
+        <td>
+
+        <table border=3 cellspacing=5 cellpadding=5>
+            <th>Address Type</th>            <th>Area</th>            <th>Street</th>
+            <th>City</th>            <th>State</th>            <th>Country</th>            <th>Pin</th>
+            <tr *ngFor="let address of applicant.addressList">
+                <td>{{address.addresstype}}</td>
+                <td>{{address.area}}</td>
+                <td>{{address.street}}</td>
+                <td>{{address.city}}</td>
+                <td>{{address.state}}</td>
+                <td>{{address.country}}</td>
+                <td>{{address.pin}}</td>
+            </tr>
+        </table>
+        </td>
+</table>
