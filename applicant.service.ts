@@ -16,5 +16,9 @@ export class ApplicantService {
     console.log('loadAllApplicantService() is loading data from spring controller.....');
     return this.myHttp.get<Applicant[]>(this.baseURL+'/getApplicants');
   }
+  addApplicantService(newApplicant: Applicant) : Observable<any> {
+    console.log('addApplicantService() invoking spring controller ..');
+    return this.myHttp.post<any>(this.baseURL+"/addApplicant",newApplicant, {responseType:'text' as 'json'});
+  }
 
 }

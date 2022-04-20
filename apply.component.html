@@ -1,0 +1,62 @@
+<h2> Bank Account Application </h2>
+<table border=1 cellspacing=10 cellpadding=10>
+    <tr>
+        <td>Enter Account Type</td> 	
+        <td>
+            <select [(ngModel)]="applicant.accountType">
+                <option value="Savings">Savings</option>
+                <option value="Current">Current</option>
+             </select>
+        </td>
+    </tr>
+    <tr>			<td>Enter Applicant Name</td> <td> <input type=text [(ngModel)]="applicant.applicantName" /> </td></tr>
+    <tr>			<td>Enter Applicant's Father Name</td> <td> <input type=text [(ngModel)]="applicant.applicantFatherName"/></td>		</tr>
+    <tr>			<td>Enter Applicant's Birthdate</td> <td> <input type=date [(ngModel)]="applicant.applicantBirthdate"/></td>		</tr>
+    <tr>			<td>Enter Mobile Number</td> <td> <input type="text" [(ngModel)]="applicant.mobileNumber"/></td>		</tr>
+    
+    <tr>
+        <td>Marital Status </td> 
+        <td>
+            <select [(ngModel)]="applicant.married">
+                <option value="Unmarried">Unmarried</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+            </select> 
+        </td>
+    </tr>
+            
+    <tr>
+        <td>Enter Occupation</td> 
+        <td>
+            <select [(ngModel)]="applicant.occupation">
+                <option value="Salaried">Salaried</option>
+                <option value="Professional">Professional</option>
+                <option value="Business">Business</option>
+                <option value="Farmer">Farmer</option>
+                <option value="Armed Forces">Armed Forces</option>
+            </select> 					 
+        </td>
+    </tr>	
+        
+        <tr>	<td>Enter Permanent Address </td>	</tr>
+        <tr>    <td>Enter Area </td> <td> <input type=text [(ngModel)]="address1.area" /> </td>    </tr>
+        <tr>    <td>Enter Street</td> <td><input  type=text [(ngModel)]="address1.street"/> </td>  </tr>
+        <tr>    <td>Enter City</td> <td><input type=text [(ngModel)]="address1.city"/> </td>       </tr>
+        <tr>    <td>Enter State</td> <td><input type=text [(ngModel)]="address1.state"/> </td>     </tr>
+        <tr>    <td>Enter Country</td> <td><input type=text [(ngModel)]="address1.country"/> </td> </tr>
+        <tr>    <td>Enter Pin</td> <td><input type=text [(ngModel)]="address1.pin" /> </td>        </tr>
+    
+        <tr>	<td>Enter Corrospondance Address </td>				</tr>
+        <tr>    <td>Enter Area </td> <td> <input type=text [(ngModel)]="address2.area" /> </td>    </tr>
+        <tr>    <td>Enter Street</td> <td><input  type=text [(ngModel)]="address2.street"/> </td>  </tr>
+        <tr>    <td>Enter City</td> <td><input type=text [(ngModel)]="address2.city"/> </td>       </tr>
+        <tr>    <td>Enter State</td> <td><input type=text [(ngModel)]="address2.state"/> </td>     </tr>
+        <tr>    <td>Enter Country</td> <td><input type=text [(ngModel)]="address2.country"/> </td> </tr>
+        <tr>    <td>Enter Pin</td> <td><input type=text [(ngModel)]="address2.pin" /> </td>        </tr>
+        
+    <tr>			<td>Enter Adhaar Number</td>  <td> <input  type=text [(ngModel)]="applicant.adhaarNumber"/></td> </tr>
+    <tr>			<td>Enter Pan Card</td> <td> <input  type=text [(ngModel)]="applicant.panCard"/></td>		</tr>
+    <tr>			<td>Enter Photo</td> <td> <input  type=text [(ngModel)]="applicant.photo"/></td>		</tr>	
+    <tr>			<td>Enter Annual Income in Rs. </td> <td> <input type=number type=text [(ngModel)]="applicant.annualIncome"/></td>	</tr>
+    <tr>			<td> <button (click)="applyForBankAccount()"> Apply For A Bank Account </button> </td>	</tr>
+</table>
