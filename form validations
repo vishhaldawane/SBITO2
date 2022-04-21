@@ -1,1 +1,8 @@
 https://jasonwatmore.com/post/2019/06/15/angular-8-template-driven-forms-validation-example
+
+
+
+<label for="salary">Enter your salary:</label>
+<input type="text" id="salary" name="salary"
+    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+    
