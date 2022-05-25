@@ -1,0 +1,11 @@
+<form #myFormData="ngForm" (ngSubmit)="onClickSubmit(myFormData.value)" novalidate>
+
+    <input type="text" name="username" placeholder="Enter username" ngModel>
+    <input type="password" name="password" placeholder="Enter password" ngModel>
+    <input type="number" name="age" placeholder="Enter age" ngModel>
+    <input type="text" name="address" placeholder="Enter address" ngModel>
+    
+    <br>
+    <input type="submit" value="SUBMIT">
+
+</form>
